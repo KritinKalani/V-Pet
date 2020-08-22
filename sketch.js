@@ -68,14 +68,18 @@ function draw() {
 
   if (currentTime === (lastFed + 1)) {
     foodObj.garden();
+    dog.remove();
   } else if (currentTime === (lastFed + 2)) {
     foodObj.bedroom();
+    dog.remove();
   } else if (currentTime > (lastFed + 2) && currentTime <= (lastFed + 4)) {
     foodObj.washroom();
+    dog.remove();
   } else {
     background(46, 139, 87)
     update("Hungry");
     foodObj.display();
+    dog.remove();
   }
 
   if (gameState !== "Hungry") {
