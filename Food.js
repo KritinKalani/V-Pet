@@ -2,7 +2,7 @@ class Food {
     constructor() {
         this.foodStock
         this.lastFed
-        this.image = loadImage("images/Milk.png");
+        this.image = loadImage("Milk.png");
     }
     getFoodStock() {
         /* database.ref('Food').on("value",function (data){
@@ -19,6 +19,7 @@ class Food {
         }
     }
     display() {
+        
         imageMode(CENTER);
         var x = 80;
         var y = 100;
@@ -30,11 +31,23 @@ class Food {
                     x = 80; 
                     y = y + 50;
                 }
-                
+
                 image(this.image, x, y, 50, 50);
                 x = x + 30;
             }
 
         }
+    }
+    garden(){
+        console.log("garden background");
+        background(garden,150,150);
+    }
+    bedroom(){
+        console.log("bedroom background");
+        background(bedroom,150,150);
+    }
+    washroom(){
+        console.log("washroom background");
+        background(bathroom,150,150);
     }
 }
